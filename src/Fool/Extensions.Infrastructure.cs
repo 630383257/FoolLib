@@ -13,7 +13,6 @@ namespace Fool {
         /// <param name="services">服务集合</param>
         /// <param name="configs">依赖配置</param>
         public static IServiceProvider AddFool( this IServiceCollection services, params IConfig[] configs ) {
-            services.AddHttpContextAccessor();
             return new DependencyConfiguration( services, configs ).Config();
         }
     }
